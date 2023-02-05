@@ -1,8 +1,14 @@
 <div class="ht-tm-navbar navbar-dark text-white">
   <div class="container">
     <div class="ht-tm-navbar-left">
-      <a href="{{ url_for('views.static_html', route='/') }}" class="text-decoration-none text-light">
-        <span class="ht-tm-navbar-title">{{ Configs.ctf_name }}</span>
+      <a href="{{ url_for('views.static_html', route='/') }}" class="navbar-brand">
+        {% if Configs.ctf_logo %}
+            <img src="{{ url_for('views.files', path=Configs.ctf_logo) }}" height="25" alt="{{ Configs.ctf_name }}">
+        {% else %}
+        <span class="text-decoration-none text-light">
+            {{ Configs.ctf_name }}
+        </span>
+        {% endif %}
       </a>
       <nav class="ht-tm-nav">
         <a href="{{ url_for('views.static_html', route='/') }}" class="text-decoration-none text-light">Home</a>
