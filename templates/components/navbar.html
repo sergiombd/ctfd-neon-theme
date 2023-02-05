@@ -3,7 +3,7 @@
     <div class="ht-tm-navbar-left">
       <a href="{{ url_for('views.static_html', route='/') }}" class="navbar-brand">
         {% if Configs.ctf_logo %}
-            <img src="{{ url_for('views.files', path=Configs.ctf_logo) }}" height="25" alt="{{ Configs.ctf_name }}">
+            <img src="{{ url_for('views.files', path=Configs.ctf_logo) }}" height="85" alt="{{ Configs.ctf_name }}">
         {% else %}
         <span class="text-decoration-none text-light">
             {{ Configs.ctf_name }}
