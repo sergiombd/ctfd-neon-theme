@@ -5,7 +5,7 @@
         <span class="ht-tm-navbar-title">{{ Configs.ctf_name }}</span>
       </a>
       <nav class="ht-tm-nav">
-        <a href="{{ url_for('views.static_html', route='/') }}" class="pl-md-0 p-3 text-light">Home</a>
+        <a href="{{ url_for('views.static_html', route='/') }}" class="text-decoration-none text-light">Home</a>
         {% for page in Plugins.user_menu_pages %}
           <a class="text-decoration-none text-light" href="{{ page.route }}">{{ page.title }}</a>
         {% endfor %}
